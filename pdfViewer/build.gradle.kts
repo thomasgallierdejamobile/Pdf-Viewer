@@ -80,7 +80,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.rajat"
             artifactId = "pdfviewer"
-            version = "1.0.3"
+            version = "1.0.4"
             afterEvaluate {
                 from(components["release"])
             }
