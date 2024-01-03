@@ -73,7 +73,6 @@ dependencies {
     // UI Tests
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-    implementation("androidx.activity:activity-compose:1.8.1")
 }
 
 publishing {
@@ -81,7 +80,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.rajat"
             artifactId = "pdfviewer"
-            version = "1.0"
+            version = "1.0.2"
             afterEvaluate {
                 from(components["release"])
             }
