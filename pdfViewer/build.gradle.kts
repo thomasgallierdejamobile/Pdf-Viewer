@@ -62,7 +62,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
-    implementation("androidx.activity:activity-ktx:1.8.1")
+    implementation("androidx.activity:activity-ktx:1.2.0-alpha05")
     // compose
     implementation(platform("androidx.compose:compose-bom:2023.10.01"))
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.10.01"))
@@ -81,7 +81,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.rajat"
             artifactId = "pdfviewer"
-            version = "2.0"
+            version = "1.0"
             afterEvaluate {
                 from(components["release"])
             }
