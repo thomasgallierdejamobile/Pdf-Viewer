@@ -50,7 +50,7 @@ dependencies {
     val kotlin_version = "1.9.21"
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
-    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
@@ -82,7 +82,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.rajat"
             artifactId = "pdfviewer"
-            version = "1.0.5"
+            version = "1.0.6"
             afterEvaluate {
                 from(components["release"])
             }

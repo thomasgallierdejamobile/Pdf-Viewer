@@ -3,7 +3,6 @@ package com.rajat.sample.pdfviewer
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -26,7 +25,7 @@ class ComposeActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
+        /* setContent {
             AndroidpdfviewerTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
@@ -36,7 +35,7 @@ class ComposeActivity : ComponentActivity() {
                     MyPdfScreenFromUrl(download_file_url2)
                 }
             }
-        }
+        } */
     }
 }
 

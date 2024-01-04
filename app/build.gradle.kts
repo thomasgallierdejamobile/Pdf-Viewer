@@ -8,12 +8,12 @@ plugins {
 android {
     namespace = "com.rajat.sample.pdfviewer"
 
-    compileSdk = 34
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.rajat.sample.pdfviewer"
-        minSdk = 21
-        targetSdk = 34
+        minSdk = 28
+        targetSdk = 33
         versionCode = 2
         versionName = "1.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -61,6 +61,15 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+    defaultConfig {
+        configurations.all {
+            resolutionStrategy {
+                force("androidx.emoji2:emoji2-views-helper:1.3.0")
+                force("androidx.emoji2:emoji2:1.3.0")
+            }
+        }
+    }
 }
 
 dependencies {
@@ -69,7 +78,7 @@ dependencies {
     implementation(kotlin("stdlib"))
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
-    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
@@ -107,8 +116,5 @@ dependencies {
     // UI Tests
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-
-    // Optional - Integration with activities
-    implementation("androidx.activity:activity-compose:1.8.1")
 
 }
