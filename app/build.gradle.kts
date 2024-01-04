@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.rajat.sample.pdfviewer"
-        minSdk = 28
+        minSdk = 26
         targetSdk = 33
         versionCode = 2
         versionName = "1.1"

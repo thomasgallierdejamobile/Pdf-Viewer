@@ -10,7 +10,7 @@ android {
     compileSdk = 33
 
     defaultConfig {
-        minSdk = 28
+        minSdk = 26
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -82,7 +82,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.rajat"
             artifactId = "pdfviewer"
-            version = "1.0.6"
+            version = "1.0.7"
             afterEvaluate {
                 from(components["release"])
             }
